@@ -1,0 +1,187 @@
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://kit.fontawesome.com/970a0290cd.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<body id="body">
+
+    <!--Icons-->
+
+<button onclick="openfiles()" class="button"><i style="color: white;" class="fa-solid fa-basket-shopping"></i><p style="font-size: 15px; padding: 0; margin: 0;">Store</p></button>
+<button onclick="openfiles2()" class="button"><i style="color: blue;" class="fa-solid fa-circle-question"></i><p style="font-size: 15px; padding: 0; margin: 0;">About</p></button>
+
+    <!--Apps-->
+
+<fieldset class="window" id="app">
+    <div class="header">
+        <button><i class="fa-solid fa-basket-shopping"></i>&nbsp;Store</button>
+        <button class="button-close" onclick="closefiles()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <iframe style="width: 900px; border: none; height: 95%; border-radius: 0px 0px 5px 5px;" id="store" src=""></iframe>
+</fieldset>
+
+<fieldset class="window" id="app2">
+    <div class="header">
+        <button><i class="fa-solid fa-circle-question"></i>&nbsp;System Properties</button>
+        <button class="button-close" onclick="closefiles2()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    EspinAsat Html Alpha 1.0
+    <br><br>
+    UserID: USER.PREVIEW
+    DeviceID: ASATESPIN.420
+</fieldset>
+
+<fieldset class="window" id="app3">
+    <div class="header">
+        <button><i class="fa-solid fa-folder"></i>&nbsp;Files</button>
+        <button class="button-close" onclick="closefiles3()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <iframe style="width: 900px; border: none; height: 480px; border-radius: 0px 0px 5px 5px;" src="" id="file"></iframe>
+</fieldset>
+
+<fieldset class="window" id="app4">
+    <div class="header">
+        <button><i class="fa-solid fa-terminal"></i>&nbsp;Terminal</button>
+        <button class="button-close" onclick="closefiles4()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <iframe style="width: 900px; border: none; height: 480px; border-radius: 0px 0px 5px 5px;" src="https://zeankundev.github.io/KaOS-13/terminal.html"></iframe>
+</fieldset>
+
+<fieldset class="window" id="app5">
+    <div class="header">
+        <button><i class="fa-solid fa-gear"></i>&nbsp;Settings</button>
+        <button class="button-close" onclick="closefiles5()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <h4 style="text-align: center; margin: 0;">Background</h4>
+    <br>
+    <input type="file" accept="image/*" onchange="custom_bg(event)">
+    <h4 style="text-align: center; margin: 0;">Coming Soon!</h4>
+    <input type="color" name=""><br>
+    <input type="checkbox" name=""><br>
+    <input type="date" name=""><br>
+    <input type="image" name=""><br>
+    <input type="radio" name=""><br>
+    <input type="range" name=""><br>
+    <input type="password" name=""><br>
+    <input type="search" name=""><br>
+</fieldset>
+
+<fieldset class="window" id="app7">
+    <div class="header">
+        <button><i class="fa-solid fa-book"></i>&nbsp;Basic Writer</button>
+        <button class="button-close" onclick="closefiles7()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <textarea style="width: 900px; border: none; height: 480px; border-radius: 0px 0px 5px 5px; resize: none;">Hello, World!</textarea>
+</fieldset>
+
+<fieldset class="window" id="app6">
+    <div class="header">
+        <button><i class="fa-brands fa-internet-explorer"></i>&nbsp;Basic Browser</button>
+        <button class="button-close" onclick="closefiles6()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div style="height: 25px; box-sizing: border-box; padding: 2px;">
+        <button onclick="browserhome()"><i class="fa-solid fa-house"></i></button>
+        <input placeholder="Enter A URL..." style="width: 795px;" id="link">
+        <button onclick="browsergo()"><i class="fa-solid fa-arrow-right"></i></button>
+        <button onclick="browserrefresh()"><i class="fa-solid fa-rotate-right"></i></button>
+    </div>
+    <iframe style="width: 900px; border: none; height: 455px; border-radius: 0px 0px 5px 5px;" id="browserframe" src="browserhome.html"></iframe>
+</fieldset>
+
+    <!--Menu-->
+
+<div class="menu" id="menu">
+    <div class="APPMENU">
+        <div class="applist">
+        <button class="menubutton">&nbsp;A
+        </button><br>
+
+        <button onclick="openfiles2()" class="menubutton">
+            <i class="fa-solid fa-circle-question"></i>&nbsp;About
+        </button><br>
+
+        <button class="menubutton">&nbsp;B
+        </button><br>
+
+        <button onclick="openfiles6()" class="menubutton">
+            <i class="fa-brands fa-internet-explorer"></i>&nbsp;Basic Browser
+        </button><br>
+        <button onclick="openfiles7()" class="menubutton">
+            <i class="fa-solid fa-book"></i>&nbsp;Basic Writer
+        </button><br>
+
+        <button class="menubutton">&nbsp;F
+        </button><br>
+
+        <button onclick="openfiles3()" class="menubutton">
+            <i class="fa-solid fa-folder"></i>&nbsp;Files
+        </button><br>
+
+        <button class="menubutton">&nbsp;S
+        </button><br>
+
+        <button onclick="openfiles()" class="menubutton">
+            <i class="fa-solid fa-basket-shopping"></i>&nbsp;Store
+        </button><br>
+        <button onclick="openfiles5()" class="menubutton">
+            <i class="fa-solid fa-gear"></i>&nbsp;Settings
+        </button><br>
+
+        <button class="menubutton">&nbsp;T
+        </button><br>
+
+        <button onclick="openfiles4()" class="menubutton">
+            <i class="fa-solid fa-terminal"></i>&nbsp;Terminal
+        </button><br>
+        </div>
+
+        <div class="applist2">
+            <button onclick="openfiles3()" style="border:none; height: 35px;" class="appicon"><img src="https://zeankundev.github.io/KaOS-13/Icons/filesicon.png" style="height: 25px; width: 25px;"></button>
+
+            <button onclick="openfiles4()" style="border:none; height: 35px;" class="appicon"><img src="https://zeankundev.github.io/KaOS-13/Icons/terminal.png" style="height: 25px; width: 25px;"></button>
+
+            <button style="border:none; height: 35px;" class="appicon"><img src="espinlogo.png" style="height: 25px; width: 25px;"></button>
+
+            <button style="border:none; height: 35px;" class="appicon"><img src="search.png" style="height: 25px; width: 25px;"></button>
+        </div>
+    </div>
+
+    <div class="menusidebar">
+        <i class="fa-solid fa-user" id="fa-solid-fa-user"></i><br>
+        <i class="fa-solid fa-power-off" id="fa-solid-fa-exit"></i><br>
+        <i class="fa-solid fa-gear" id="fa-solid-fa-exit" onclick="openfiles5()"></i>
+    </div>
+</div>
+
+    <!--Footer-->
+
+<footer>
+    <button onclick="menu()" style="border:none;" class="appicon"><img src="espinlogo.png" style="height: 20px; width: 20px;"></button>
+
+    <button onclick="search()" style="border:none;" class="appicon"><img src="search.png" style="height: 20px; width: 20px;"></button>
+
+    <button onclick="openfiles3()" style="border:none;" class="appicon"><img src="https://zeankundev.github.io/KaOS-13/Icons/filesicon.png" style="height: 20px; width: 20px;"></button>
+
+    <button onclick="openfiles4()" style="border:none;" class="appicon"><img src="https://zeankundev.github.io/KaOS-13/Icons/terminal.png" style="height: 20px; width: 20px;"></button>
+</footer>
+
+
+
+</body>
+<script>
+
+</script>

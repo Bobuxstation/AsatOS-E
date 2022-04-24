@@ -1,0 +1,243 @@
+fieldset {
+width: 300px;
+height: 506px;
+background: white;
+display: none;
+border-radius: 5px;
+padding: 0;
+border: black solid 1px;
+animation-name: menushow;
+animation-duration: 0.25s;
+}
+.header {
+border: black solid 1px;
+border-width: 0px 0px 1px 0px;
+padding: 0;
+height: 25px;
+cursor: move;
+}
+.button-close {
+    float: right;
+    margin: 0;
+    background: none;
+    border: none;
+    height: 100%;
+    width: 40px;
+    font-size: 20px;
+    border-radius: 0px 3px 0px 0px;
+}
+.header button {
+    height: 100%;
+    background: none;
+    border: none;
+}
+.button-close:hover {
+    cursor: pointer;
+    animation-name: button-close;
+    animation-duration: 0.25s;
+    background: red;
+}
+@keyframes button-close {
+    0% {
+        background: white;
+    }
+    100% {
+        background: red;
+    }
+}
+
+body {
+background: lightblue;
+font-family: espindefault !important;
+overflow: hidden;
+background-image: url("https://bobuxstation.github.io/AsatOS/WinArka/bg.jpg");
+background-size: cover;
+margin: 0;
+padding: 0;
+}
+@font-face {
+    font-family: espindefault;
+    src: url("AbletonSansSmallRegular.ttf");
+}
+
+.button {
+height: 100px;
+width: 100px;
+background: none;
+border: none;
+border-radius: 5px;
+margin: 5px;
+font-size: 70px;
+text-shadow: 2px 2px 8px #000000;
+}
+.button:hover {
+    border: #00000090 solid 1px;
+    background: #1d1d1d50;
+    cursor: pointer;
+    animation-name: shortcut;
+    animation-duration: 0.25s;
+}
+@keyframes shortcut {
+    0% {
+        border: none;
+        background: none;
+    }
+    100% {
+        border: #00000090 solid 1px;
+        background: #1d1d1d50;
+    }
+}
+.button p {
+    color: white;
+}
+
+video {
+border-radius: 5px;
+}
+textarea {
+resize: none;
+font-family: espindefault;
+border: none;
+font-size: 15px;
+padding: 5px;
+}
+
+#app {
+position: fixed!important;
+z-index: 1;
+}
+#app2 {
+position: fixed!important;
+z-index: 2;
+}
+#app3 {
+position: fixed!important;
+z-index: 3;
+}
+#app4 {
+position: fixed!important;
+z-index: 4;
+}
+#app5 {
+position: fixed!important;
+z-index: 5;
+}
+#app6 {
+position: fixed!important;
+z-index: 6;
+}
+#app7 {
+position: fixed!important;
+z-index: 7;
+}
+
+footer {
+    width: 100%;
+    background: #1d1d1dCC;
+    padding: 0;
+    bottom: 0;
+    position: fixed;
+    height: 35px;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+.menu {
+    bottom: 0;
+    position: fixed;
+    background: #1d1d1dCC;
+    padding: 5px;
+    margin-bottom: 35px;
+    height: 400px;
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+    animation-name: menushow;
+    animation-duration: 0.25s;
+    backdrop-filter: blur(10px);
+}
+.menusidebar {
+    float: left;
+    border: white solid 1px;
+    border-width: 0px 0.5px 0px 0px;
+    height: 100%;
+}
+#fa-solid-fa-user {
+    background: none;
+    padding: 5px;
+    border-radius: 100%;
+    color: white;
+    margin-right: 5px;
+}
+#fa-solid-fa-exit {
+    background: none;
+    padding: 5px;
+    color: white;
+    margin-right: 5px;
+}
+@keyframes menushow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes menubutton {
+    0% {
+        background: none;
+    }
+    100% {
+        background: #1d1d1d;
+    }
+}
+.APPMENU {
+    background: none;
+    border-radius: 5px;
+    width: 355px;
+    height: 100%;
+    float: right;
+}
+.searchbar {
+    height: 5%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+}
+.menubutton {
+    height: 30px;
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 20px;
+    color: white;
+}
+.menubutton:hover {
+    background: #1d1d1d;
+    animation-name: menubutton;
+    animation-duration: 0.5s;
+}
+.appicon {
+    height: 100%;
+    margin: 0;
+    background: none;
+    width: 35px;
+}
+.appicon:hover {
+    cursor: pointer;
+    animation-name: menubutton;
+    animation-duration: 0.5s;
+    background: #1d1d1d;
+}
+.applist {
+    float: left;
+    border: white solid 1px;
+    border-width: 0px 0.5px 0px 0px;
+    height: 100%;
+    width: 250px;
+}
+.applist2 {
+    float: right;
+    width: 100px;
+}
