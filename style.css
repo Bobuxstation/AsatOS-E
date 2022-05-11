@@ -241,3 +241,6 @@ footer {
     float: right;
     width: 100px;
 }
+* {
+    font-family: default;
+}
