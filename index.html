@@ -30,10 +30,14 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
     </div>
-    AsatOS E 1.0
+    <div class="aboutdiv">
+    AsatOS E 22.6
     <br><br>
     UserID: USER.PREVIEW
     DeviceID: ASATOS-E.420
+    <br><br>
+    The Victor Company
+    </div>
 </fieldset>
 
 <fieldset class="window" id="app3">
@@ -53,7 +57,7 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
     </div>
-    <iframe style="width: 900px; border: none; height: 480px; border-radius: 0px 0px 5px 5px;" src="https://zeankundev.github.io/KaOS-13/terminal.html"></iframe>
+    <iframe style="width: 900px; border: none; height: 480px; border-radius: 0px 0px 5px 5px;" src="terminal.html"></iframe>
 </fieldset>
 
 <fieldset class="window" id="app5">
@@ -63,18 +67,12 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
     </div>
+    <div class="aboutdiv">
     <h4 style="text-align: center; margin: 0;">Background</h4>
     <br>
     <input type="file" accept="image/*" onchange="custom_bg(event)">
-    <h4 style="text-align: center; margin: 0;">Coming Soon!</h4>
-    <input type="color" name=""><br>
-    <input type="checkbox" name=""><br>
-    <input type="date" name=""><br>
-    <input type="image" name=""><br>
-    <input type="radio" name=""><br>
-    <input type="range" name=""><br>
-    <input type="password" name=""><br>
-    <input type="search" name=""><br>
+    <button onclick="randombg()">Select Random Background</button>
+    </div>
 </fieldset>
 
 <fieldset class="window" id="app7">
@@ -103,6 +101,19 @@
     <iframe style="width: 900px; border: none; height: 455px; border-radius: 0px 0px 5px 5px;" id="browserframe" src="browserhome.html"></iframe>
 </fieldset>
 
+<fieldset class="window" id="app8">
+    <div class="header">
+        <button><i class="fa-brands fa-apple"></i>&nbsp;iSperm</button>
+        <button class="button-close" onclick="closeisperm()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div style="aboutdiv">
+    <img src="load.gif" style="height: 20px; width: 20px; padding: 5px;">
+    Connecting to your iSperm...
+    </div>
+</fieldset>
+
     <!--Menu-->
 
 <div class="menu" id="menu">
@@ -128,8 +139,16 @@
         <button class="menubutton">&nbsp;F
         </button><br>
 
+
         <button onclick="openfiles3()" class="menubutton">
             <i class="fa-solid fa-folder"></i>&nbsp;Files
+        </button><br>
+
+        <button class="menubutton">&nbsp;I
+        </button><br>
+
+        <button onclick="openisperm()" class="menubutton">
+            <i class="fa-brands fa-apple"></i>&nbsp;iSperm
         </button><br>
 
         <button class="menubutton">&nbsp;S
@@ -178,11 +197,25 @@
     <button onclick="openfiles3()" style="border:none;" class="appicon"><img src="https://zeankundev.github.io/KaOS-13/Icons/filesicon.png" style="height: 20px; width: 20px;"></button>
 
     <button onclick="openfiles4()" style="border:none;" class="appicon"><img src="https://zeankundev.github.io/KaOS-13/Icons/terminal.png" style="height: 20px; width: 20px;"></button>
+
+    <button onclick="openfiles5()" style="border:none; float: right; width: 55px;" class="appicon"><h4 style="margin:0; color: white;"><i class="fa-solid fa-wifi"></i>&nbsp;<i class="fa-solid fa-battery-full"></i>&nbsp;<i class="fa-solid fa-gear"></i></h4></button>
+    <button style="border:none; float: right; width: 55px;" class="appicon"><h4 style="margin:0; color: white;" id="span"></h4></button>
 </footer>
 
 
 
 </body>
 <script>
+    var span = document.getElementById('span');
 
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
+  span.textContent = 
+    (" ") + ("0" + h).substr(-2) + " : " + ("0" + m).substr(-2);
+};
+
+setInterval(time)
 </script>

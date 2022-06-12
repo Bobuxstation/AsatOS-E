@@ -55,6 +55,13 @@ function closefiles7() {
 document.getElementById("app7").style.display = "none";
 }
 
+function openisperm() {
+document.getElementById("app8").style.display = "block";
+}
+function closeisperm() {
+document.getElementById("app8").style.display = "none";
+}
+
 function menu() {
   var x = document.getElementById("menu");
   if (x.style.display === "none") {
@@ -62,6 +69,10 @@ function menu() {
   } else {
     x.style.display = "none";
   }
+}
+function randombg() {
+  document.getElementById("body").style.backgroundImage = "url('logo.png')"
+  document.getElementById("body").style.backgroundImage = "url('https://source.unsplash.com/1600x900/?')"
 }
 function custom_bg(event) {
   var reader = new FileReader();
